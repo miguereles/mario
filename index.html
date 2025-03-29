@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crud do rafinha</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/forms.css">
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <div class="logo"><a href="#" onclick="showSection('home')">Meu Site</a></div>
+            <ul class="menu-desktop">
+                <li><a href="#" onclick="showSection('filmes')">Filmes</a></li>
+                <li><a href="#" onclick="showSection('series')">Séries</a></li>
+                <li><a href="#" onclick="showSection('hobbies')">Hobbies</a></li>
+                <li><a href="#" onclick="showSection('musicas')">Músicas</a></li>
+                <li><a href="#" onclick="showSection('quemsomos')">Quem Somos</a></li>
+                <li><a href="#" onclick="showSection('perfil')">Olá, Almondega!</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger">☰</div>
+        </div>
+        <ul class="menu-mobile" id="menuMobile">
+            <li><a href="#" onclick="showSection('filmes')">Filmes</a></li>
+            <li><a href="#" onclick="showSection('series')">Séries</a></li>
+            <li><a href="#" onclick="showSection('hobbies')">Hobbies</a></li>
+            <li><a href="#" onclick="showSection('musicas')">Músicas</a></li>
+            <li><a href="#" onclick="showSection('quemsomos')">Quem Somos</a></li>
+            <li><a href="#" onclick="showSection('perfil')">Olá, Almondega</a></li>
+        </ul>
+    </nav>
+    <div id="filmes" class="container section filmes">
+        <form>
+        <p><label>Nome:<input type="text" id="fm_nome"></label></p>
+        <div class="mult-input">
+            <p>
+                <label>Categoria:
+                    <select name="fm_cat">
+                    
+                    </select>
+                </label>
+                <label class="active">Categoria:
+                    <input type="text" id="fm_cat-nova"></label>
+                <label>
+                    <span></span>
+                    <p align="end">
+                        <input type="checkbox" id="nova" checked disabled>Nova Categoria</input>
+                    </p>
+                </label>
+            </p>
+        </div>
+        <div class="mult-input">
+            <p>
+                
+                <label class="active">Imagem:
+                    <input type="text" id="fm_image-file" name="fm_image-file">
+                </label>
+                <label class="active">Imagem:
+                    <input type="text" id="fm_image-url" name="fm_image-url">
+                </label>
+                <label>
+                    <span></span>
+                    <p align="end">
+                        <input type="checkbox" id="url" name="fm_image-url" checked>Url?</input>
+                    </p>
+                </label>
+            </p>
+        </div>
+        <p><label>Trailer:<input type="text" id="fm_content"></label></p>
+    </div>
+    <div class="container section home-section active" id="home">
+        <h1>Página inicial</h1>
+        
+        <p>Ei bisbilhoteiro! Eu era um aventureiro como você, até que levei uma flechada no joelho (ele casou)</p><br>
+        <p>Aproveite para ver algumas funcionalidades do nosso site, não achou que estavamos na idade media han? hahaha</p>
+        
+        <li><a href="#" onclick="showSection('filmes')">Filmes</a></<li>
+            <li><a href="#" onclick="showSection('series')">Séries</a></li>
+            <li><a href="#" onclick="showSection('hobbies')">Hobbies</a></li>
+            <li><a href="#" onclick="showSection('musicas')">Músicas</a></li>
+            <li><a href="#" onclick="showSection('quemsomos')">Quem Somos</a></li>
+            <li><a href="#" onclick="showSection('perfil')">Perfil</a></li></nav>
+
+    </div>
+    <div class="section container" id="quemsomos">
+        <h1>Com quantos paus se faz uma canoa?</h1>
+        <p>Eu não sei, mas sei que esse site precisou de 4 lindos integrantes e um vampiro que não dorme</p>
+         <div class="container">
+                
+                
+            <h3>Elaine Souza</h3>
+            <p>28 anos</p>
+            <h3>Miguel</h3>
+            <p>17 anos</p>
+            <h3>Bruna</h3>
+            <p>17 anos</p>
+            <h3>Pedro Guilherme</h3>
+            <p>26 anos</p>
+            <h3>Mário Luiz</h3>
+            <p>22 anos</p>
+        </div>
+    </div>
+    </form>
+
+    <!--Seção do perfil, cole o html abaixo-->
+    <div class="section container" id="perfil">
+        <h1>Olá, <span id="#pf_nome">Almondega</span></h1>
+        <p>Se não me engano, precisamos criar um formulário que altera ou adiciona alguns elementos na tela. Falta criar esses JS's.</p>
+        <form>
+            <p>
+                <label for="pf_nome">Nome:
+                <input type="text" id="pf_nome" name="pf_nome"></label>
+            </p>
+            <p>
+                <label for="pf_filme-favorito">Filme:
+                    <select id="pf_filme-favoritoe" name="pf_filme-favorito">
+                        <option value="-1">Adicione um para continuar</option>    
+                    </select>                
+                </label>
+            </p>
+            <p>
+                <label for="pf_hobbie-favorito">Hobie:
+                    <select id="pf_hobbie-favoritoe" name="pf_hobbie-favorito">
+                        <option value="-1">Adicione um para continuar</option>    
+                    </select>                
+                </label>
+            </p>
+            <p>
+                <label for="pf_musica-favorita">Musica:
+                    <select id="pf_musica-favorita" name="pf_musica-favorita">
+                        <option value="-1">Adicione um para continuar</option>    
+                    </select>                
+                </label>
+            </p>
+            <p>   
+                <label for="pf_livro-favorito">Livro:
+                    <select id="pf_livro-favorita" name="pf_livro-favorito">
+                        <option value="-1">Adicione um para continuar</option>    
+                    </select>                
+                </label>
+            </p>
+
+        </form>
+    </div>
+    <footer class="container">
+        <h1 align="center">Etec - Extensão Maracanã</h1>
+        <p>Mapa do site</p>
+        <ul>
+            <li></li>
+        </ul>
+        <p>Integrantes</p>
+        <ul>
+            <li></li>
+        </ul>
+    </footer>
+    <script src="./assets/js/changePage.js"></script>
+    <script src="./assets/js/menu.js"></script>
+</body>
+</html>

@@ -1,0 +1,8 @@
+form label{
+    display:flex;
+    justify-content: space-between;
+    min-width:100%;
+}
+form p {
+    max-width: 300px;;
+}
