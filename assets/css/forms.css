@@ -1,8 +1,17 @@
 form label{
     display:flex;
+    flex-direction: row;;
     justify-content: space-between;
+    align-items: end;
     min-width:100%;
 }
-form p {
-    max-width: 300px;;
+.mult-input label{
+    display:none
+}
+.mult-input label.active, .mult-input label.option{
+    display:flex
+}
+form input, form select
+{
+    width:200px;
 }
