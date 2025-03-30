@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="./assets/css/style.css">
     <link rel="stylesheet" href="./assets/css/forms.css">
 </head>
-<body>
+<body  style="background-color: rgba(127, 255, 212, 0.719);">
     <nav>
         <div class="nav-container">
             <div class="logo"><a href="#" onclick="showSection('home')">Meu Site</a></div>
@@ -50,46 +50,25 @@
         <h1>Filmes</h1>
         <form>
             <p><label>Nome: <input type="text" id="fm_nome"></label></p>
-            <div class="mult-input">
-                <p>
-                    <label>Categoria:
-                        <select name="fm_cat"></select>
-                    </label>
-                    <label>Nova Categoria:
-                        <input type="text" id="fm_cat-nova">
-                    </label>
-                    <label>
-                        <input type="checkbox" id="nova" checked disabled> Nova Categoria
-                    </label>
-                </p>
-            </div>
-            <div class="mult-input">
-                <p>
-                    <label>Imagem (Arquivo):
-                        <input type="text" id="fm_image-file" name="fm_image-file">
-                    </label>
-                    <label>Imagem (URL):
-                        <input type="text" id="fm_image-url" name="fm_image-url">
-                    </label>
-                    <label>
-                        <input type="checkbox" id="url" name="fm_image-url" checked> URL?
-                    </label>
-                </p>
-            </div>
-            <p><label>Trailer: <input type="text" id="fm_content"></label></p>
+            <p><label>Categoria: <input type="text" id="fm_cat-nova"></label></p>
+            <p><label>Imagem (URL): <input type="url" id="fm_image-url"></label></p>
+            <p><label>Trailer (URL): <input type="url" id="fm_content"></label></p>
+            <p><button type="submit">Salvar</button></p>
         </form>
+        <div id="filmes-list"></div>
     </div>
-
+    
     <!-- Seção Séries -->
     <div id="series" class="container section">
         <h1>Séries</h1>
-        <p>Adicione e explore suas séries favoritas!</p>
         <form>
             <p><label>Nome da Série: <input type="text" id="serie_nome"></label></p>
             <p><label>Gênero: <input type="text" id="serie_genero"></label></p>
             <p><label>Descrição: <textarea id="serie_descricao"></textarea></label></p>
-            <p><button type="submit" class="botao">Salvar</button></p>
+            <p><label>Imagem (URL): <input type="url" id="serie_imagem"></label></p>
+            <p><button type="submit">Salvar</button></p>
         </form>
+        <div id="series-list"></div>
     </div>
 
     <!-- Seção Hobbies -->
@@ -98,7 +77,7 @@
         <p>Adicione e explore seus hobbies favoritos!</p>
         <form>
             <p><label>Nome do Hobbie: <input type="text" id="hobbie_nome"></label></p>
-            <p><label>Descrição: <textarea id="hobbie_descricao"></textarea></label></p>
+            <p><label>Descrição: <textarea id="hobbie_descricao" rows="7" maxlength="512" ></textarea></label></p>
             <p><button type="submit" class="botao">Salvar</button></p>
         </form>
     </div>
@@ -106,13 +85,14 @@
     <!-- Seção Músicas -->
     <div id="musicas" class="container section">
         <h1>Músicas</h1>
-        <p>Adicione suas músicas favoritas e crie playlists incríveis!</p>
         <form>
             <p><label>Nome da Música: <input type="text" id="musica_nome"></label></p>
             <p><label>Artista: <input type="text" id="musica_artista"></label></p>
             <p><label>Gênero: <input type="text" id="musica_genero"></label></p>
-            <p><button type="submit" class="botao">Salvar</button></p>
+            <p><label>Imagem (URL): <input type="url" id="musica_imagem"></label></p>
+            <p><button type="submit">Salvar</button></p>
         </form>
+        <div id="musicas-list"></div>
     </div>
 
     <!-- Seção Quem Somos -->
@@ -120,11 +100,11 @@
         <h1>Quem Somos</h1>
         <p>Conheça os integrantes do nosso site:</p>
         <div class="container">
-            <h3>Elaine Souza</h3><p>28 anos</p>
-            <h3>Miguel</h3><p>17 anos</p>
-            <h3>Bruna</h3><p>17 anos</p>
-            <h3>Pedro Guilherme</h3><p>26 anos</p>
-            <h3>Mário Luiz</h3><p>22 anos</p>
+            <h3>Elaine Souza</h3><p class="idade">28 anos</p>
+            <h3>Miguel</h3><p class="idade">17 anos</p>
+            <h3>Bruna</h3><p class="idade">17 anos</p>
+            <h3>Pedro Guilherme</h3><p class="idade">26 anos</p>
+            <h3>Mário Luiz</h3><p class="idade">22 anos</p>
         </div>
     </div>
 
@@ -153,25 +133,18 @@
 
     <footer class="container">
         <h1 align="center">Etec - Extensão Maracanã</h1>
-        <p>Mapa do site</p>
+        <h3 style="color: #333;">Mapa do site</h3>
         <ul>
-            <li>Filmes</li>
-            <li>Séries</li>
-            <li>Hobbies</li>
-            <li>Músicas</li>
-            <li>Quem Somos</li>
-        </ul>
-        <p>Integrantes</p>
-        <ul>
-            <li>Elaine Souza</li>
-            <li>Miguel</li>
-            <li>Bruna</li>
-            <li>Pedro Guilherme</li>
-            <li>Mário Luiz</li>
-        </ul>
+            <li><a href="#" onclick="showSection('home')">Início</a></li>
+            <li><a href="#" onclick="showSection('filmes')">Filmes</a></li>
+            <li><a href="#" onclick="showSection('series')">Séries</a></li>
+            <li><a href="#" onclick="showSection('hobbies')">Hobbies</a></li>
+            <li><a href="#" onclick="showSection('musicas')">Músicas</a></li>
+            <li><a href="#" onclick="showSection('quemsomos')">Quem Somos</a></li>
     </footer>
 
     <script src="./assets/js/changePage.js"></script>
     <script src="./assets/js/menu.js"></script>
+    <script src="./assets/js/crud.js"></script>
 </body>
 </html>

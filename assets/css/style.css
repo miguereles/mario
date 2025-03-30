@@ -253,3 +253,9 @@ footer {
 p{
     text-align: center;
 }
+textarea{
+    resize: none;
+}
+.idade{
+    text-align: start;
+}
