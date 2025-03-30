@@ -101,11 +101,10 @@ document.querySelector('#series form').addEventListener('submit', function (e) {
 function renderSeries() {
     renderItems(seriesKey, 'series-list', (serie, index) => {
         const item = document.createElement('div');
-        item.style.marginBottom = '15px'; // Adiciona espaçamento entre os itens
+        item.style.marginBottom = '15px';
         item.innerHTML = `
-            <img src="${serie.imagem || ''}" alt="${serie.nome}" style="width: 150px; height: auto; display: block; margin-bottom: 10px;">
+            <img src="${serie.imagem}" alt="${serie.nome}" style="width: 150px; height: auto; display: block; margin-bottom: 10px;">
             <strong>${serie.nome}</strong> - ${serie.genero}
-            <br>
             <p>${serie.descricao}</p>
             <button onclick="deleteSerie(${index})">Excluir</button>
         `;
@@ -126,9 +125,8 @@ document.querySelector('#hobbies form').addEventListener('submit', function (e) 
     e.preventDefault();
     const nome = document.querySelector('#hobbie_nome').value;
     const descricao = document.querySelector('#hobbie_descricao').value;
-    const imagem = document.querySelector('#hobbie_imagem').value;
 
-    createItem(hobbiesKey, { nome, descricao, imagem });
+    createItem(hobbiesKey, { nome, descricao });
     alert('Hobbie salvo com sucesso!');
     renderHobbies();
 });
@@ -136,9 +134,8 @@ document.querySelector('#hobbies form').addEventListener('submit', function (e) 
 function renderHobbies() {
     renderItems(hobbiesKey, 'hobbies-list', (hobbie, index) => {
         const item = document.createElement('div');
-        item.style.marginBottom = '15px'; // Adiciona espaçamento entre os itens
+        item.style.marginBottom = '15px';
         item.innerHTML = `
-            <img src="${hobbie.imagem || ''}" alt="${hobbie.nome}" style="width: 150px; height: auto; display: block; margin-bottom: 10px;">
             <strong>${hobbie.nome}</strong>
             <p>${hobbie.descricao}</p>
             <button onclick="deleteHobbie(${index})">Excluir</button>
@@ -171,9 +168,9 @@ document.querySelector('#musicas form').addEventListener('submit', function (e) 
 function renderMusicas() {
     renderItems(musicasKey, 'musicas-list', (musica, index) => {
         const item = document.createElement('div');
-        item.style.marginBottom = '15px'; // Adiciona espaçamento entre os itens
+        item.style.marginBottom = '15px';
         item.innerHTML = `
-            <img src="${musica.imagem || ''}" alt="${musica.nome}" style="width: 150px; height: auto; display: block; margin-bottom: 10px;">
+            <img src="${musica.imagem}" alt="${musica.nome}" style="width: 150px; height: auto; display: block; margin-bottom: 10px;">
             <strong>${musica.nome}</strong> - ${musica.artista}
             <p>${musica.genero}</p>
             <button onclick="deleteMusica(${index})">Excluir</button>
