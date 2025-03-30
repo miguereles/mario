@@ -44,9 +44,34 @@ nav {
 }
 
 .hamburger {
-    display: none;
-    font-size: 1.5rem;
+    display: none; /* Exibido apenas em telas menores */
     cursor: pointer;
+    position: relative;
+    width: 30px;
+    height: 20px;
+    z-index: 1100;
+}
+
+.hamburger span {
+    display: block;
+    background-color: #fff; /* Cor das barras */
+    height: 3px;
+    width: 100%;
+    margin: 4px 0;
+    transition: all 0.3s ease;
+}
+
+/* Animação para o ícone do hambúrguer quando ativo */
+.hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
 }
 
 .menu-mobile {
@@ -58,10 +83,16 @@ nav {
     top: 50px;
     right: 20px;
     z-index: 1000;
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    border-radius: 5px;
 }
 
 .menu-mobile.active {
     display: block;
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .menu-mobile li a {
@@ -71,9 +102,15 @@ nav {
     padding: 10px 0;
 }
 
+/* Estilo para as seções */
 .section {
     display: none;
     padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    max-width: 800px;
 }
 
 .section.active {
@@ -105,4 +142,101 @@ footer ul li {
     .hamburger {
         display: block;
     }
+}
+body {
+    font-family: 'Poppins', Arial, sans-serif;
+    background-color: #f4f4f9;
+    color: #333; 
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    background-color: #ffffff; 
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+}
+
+.container2 {
+    background-color: #e3f2fd; 
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+}
+
+h1 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.botao {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff; 
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.botao:hover {
+    background-color: #0056b3; 
+    transform: scale(1.1);
+}
+
+form {
+    margin-top: 20px;
+}
+
+form p {
+    margin-bottom: 15px;
+}
+
+form label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+form input, form select, form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+form button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: #0056b3;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+    font-size: 0.9em;
 }

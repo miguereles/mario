@@ -1,11 +1,10 @@
 // Função para mostrar/ocultar seções
 function showSection(sectionId) {
-    // Esconde todas as seções
-    document.querySelectorAll('.section').forEach(section => {
+    const sections = document.querySelectorAll('.section');
+    sections.forEach(section => {
         section.classList.remove('active');
     });
 
-    // Mostra apenas a seção selecionada
     const targetSection = document.getElementById(sectionId);
     if (targetSection) {
         targetSection.classList.add('active');
