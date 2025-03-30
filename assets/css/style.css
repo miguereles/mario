@@ -196,40 +196,50 @@ h1 {
 }
 
 form {
-    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    padding: 20px;
+    max-width: 500px; /* Define uma largura máxima */
+    border: 1px solid #ccc; /* Opcional: borda para destacar o formulário */
+    border-radius: 8px; /* Bordas arredondadas */
+    background-color: #f9f9f9; /* Fundo claro */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para destaque */
 }
 
 form p {
+    width: 100%; /* Faz os elementos ocuparem toda a largura do formulário */
     margin-bottom: 15px;
 }
 
 form label {
-    display: block;
-    font-weight: bold;
-    margin-bottom: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
 }
 
-form input, form select, form textarea {
-    width: 100%;
+form input, form select, form textarea, form button {
+    width: 100%; /* Faz os campos ocuparem toda a largura */
     padding: 10px;
+    margin-top: 5px;
     border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 1rem;
+    border-radius: 4px;
+    box-sizing: border-box;
 }
 
 form button {
-    background-color: #007bff;
-    color: #fff;
+    background-color: #007BFF; /* Cor do botão */
+    color: white;
     border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
     cursor: pointer;
-    font-size: 1rem;
     transition: background-color 0.3s ease;
 }
 
 form button:hover {
-    background-color: #0056b3;
+    background-color: #0056b3; /* Cor ao passar o mouse */
 }
 
 footer {
@@ -239,4 +249,7 @@ footer {
     padding: 20px;
     margin-top: 20px;
     font-size: 0.9em;
+}
+p{
+    text-align: center;
 }
