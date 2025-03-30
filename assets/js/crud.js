@@ -50,8 +50,13 @@ document.querySelector('#filmes form').addEventListener('submit', function (e) {
     const imagem = document.querySelector('#fm_image-url').value;
     const trailer = document.querySelector('#fm_content').value;
 
+    
     createItem(filmesKey, { nome, categoria, imagem, trailer });
+    let option = document.createElement('option')
+    option.innerText = nome
+    document.querySelector('#pf_filme-favorito').append(option)
     alert('Filme salvo com sucesso!');
+
     renderFilmes();
 });
 
