@@ -1,5 +1,5 @@
 /* Reset básico */
-body, h1, p, ul, li, a {
+*{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -17,7 +17,9 @@ nav {
     color: white;
     padding: 10px 20px;
 }
-
+div{
+    width:100%;
+}
 .nav-container {
     display: flex;
     justify-content: space-between;
@@ -222,7 +224,6 @@ form label {
 }
 
 form input, form select, form textarea, form button {
-    width: 100%; /* Faz os campos ocuparem toda a largura */
     padding: 10px;
     margin-top: 5px;
     border: 1px solid #ccc;
