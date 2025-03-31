@@ -54,6 +54,7 @@ document.querySelector('#filmes form').addEventListener('submit', function (e) {
     createItem(filmesKey, { nome, categoria, imagem, trailer });
     let option = document.createElement('option')
     option.innerText = nome
+    option.setAttribute('value', nome)
     document.querySelector('#pf_filme-favorito').append(option)
     alert('Filme salvo com sucesso!');
 
@@ -83,6 +84,7 @@ function renderFilmes() {
 }
 
 function deleteFilme(index) {
+    
     deleteItem(filmesKey, index);
     renderFilmes();
 }
