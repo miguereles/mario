@@ -1,0 +1,121 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #cee6ce; /* Verde */
+    color: white;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    
+    background-color: #4fa073;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.container2 {
+    
+    background-color: #1ac4b6;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+ /* não consegui por no centro embaixo */
+.botao{
+    
+    display: block;
+    width: 200px;
+    margin: 10px auto;
+    padding: 10px;
+    text-align: center;
+    font-size: 15px;
+    font-weight: bold;
+    text-decoration: none;
+    
+    color: white;
+    
+    transition: background-color 0.3s;
+}
+.botao:hover{
+    color: #162217;
+}
+
+
+h1 {
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 30px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.h3 {
+    background-color: rgba(44, 40, 40, 0.9);
+    border: 5px solid #eccb0d; /* Amarelo */
+    border-radius: 15px;
+    padding: 30px;
+    color: #160466;
+    box-shadow: 0 0 20px rgba(90, 138, 1, 0.2);
+}
+
+.info-box {
+    background-color: rgba(228, 21, 21, 0.9);
+    border: 5px solid #FFD700; /* Amarelo */
+    border-radius: 15px;
+    padding: 30px;
+    color: #333;
+    box-shadow: 0 0 20px rgba(13, 224, 207, 0.2);
+}
+
+.team-members {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    color: #FFD700;
+    margin-top: 20px;
+}
+
+.member {
+    background-color: #2c2828;
+    padding: 15px;
+    border-radius: 8px;
+    border-left: 4px solid #FFD700;
+}
+
+.logo {
+    text-align: center;
+    font-size: 2em;
+    font-weight: bold;
+    margin-top: 30px;
+    color: #FFD700;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.age {
+    font-style: italic;
+    color: #666;
+}
+    .botao:hover{
+    background-color: rgb(153, 175, 40);
+    color: rgb(255, 255, 255);
+    transform: scale(1.2);
+    
+    text-decoration: none;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+    .botao {
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: #007bff;
+        color: white;
+        text-decoration: none;
+        border-radius: 5px;
+        border: none;
+        cursor: pointer;
+    }
+    
+    .botao:hover {
+        background-color: #0056b3;
+    }
